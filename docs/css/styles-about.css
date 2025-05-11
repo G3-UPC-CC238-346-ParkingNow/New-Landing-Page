@@ -1,0 +1,232 @@
+/* ===============================
+   Base y variables
+================================= */
+:root {
+  --azul-noche: #2d333f;
+  --amarillo: #fff500;
+  --gris: #828282;
+  --gris-claro: #f2f2f2;
+  --blanco: #ffffff;
+  --fuente: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: var(--blanco);
+  color: var(--azul-noche);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ===============================
+   Header
+================================= */
+.header {
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--gris-claro);
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--azul-noche);
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--amarillo);
+}
+
+/* ===============================
+   Secciones Misión y Visión
+================================= */
+.seccion {
+  padding: 4rem 2rem;
+  background-color: var(--blanco);
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.contenido.reverse {
+  flex-direction: column-reverse;
+}
+
+.texto {
+  max-width: 600px;
+  text-align: center;
+}
+
+.texto h2 {
+  font-size: 2.3rem;
+  color: var(--amarillo);
+  margin-bottom: 1rem;
+}
+
+.texto p {
+  color: var(--gris);
+  font-size: 1rem;
+}
+
+.imagen {
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.imagen:hover {
+  transform: scale(1.03);
+}
+
+/* ===============================
+   Características
+================================= */
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--azul-noche);
+  margin: 4rem 0 2rem;
+  position: relative;
+}
+
+.titulo-seccion::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--amarillo);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.grid-caracteristicas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+.card {
+  background-color: var(--gris-claro);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  flex: 1 1 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--azul-noche);
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: var(--gris);
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   Footer
+================================= */
+footer {
+  background-color: var(--azul-noche);
+  color: var(--blanco);
+  padding: 3rem 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer-top h3 {
+  color: var(--amarillo);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.iconos-redes {
+  display: flex;
+  gap: 1rem;
+}
+
+.iconos-redes img {
+  height: 28px;
+  filter: brightness(1.1);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--gris-claro);
+  font-size: 0.85rem;
+}
+
+/* ===============================
+   Responsive
+================================= */
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contenido,
+  .contenido.reverse {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .texto, .imagen {
+    flex: 1;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
