@@ -26,8 +26,16 @@ body {
 img {
   max-width: 100%;
   display: block;
-  border-radius: 12px;
+  border-radius: 16px;
+  object-fit: cover;
 }
+
+.logo {
+  max-height: 60px;
+  width: auto;
+  display: block;
+}
+
 
 /* ===============================
    Header
@@ -40,16 +48,22 @@ img {
 
 .header-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .nav a {
@@ -68,19 +82,20 @@ img {
    Secciones Misión y Visión
 ================================= */
 .seccion {
-  padding: 4rem 2rem;
-  background-color: var(--blanco);
+  padding: 5rem 2rem;
+  background-color: var(--gris-claro);
 }
 
 .contenido {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .contenido.reverse {
   flex-direction: column-reverse;
+  gap: 1.5rem;
 }
 
 .texto {
@@ -89,23 +104,26 @@ img {
 }
 
 .texto h2 {
-  font-size: 2.3rem;
-  color: var(--amarillo);
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--azul-noche);
+  margin-bottom: 1.2rem;
 }
 
 .texto p {
   color: var(--gris);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .imagen {
   max-width: 500px;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .imagen:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 /* ===============================
@@ -115,7 +133,7 @@ img {
   text-align: center;
   font-size: 2.5rem;
   color: var(--azul-noche);
-  margin: 4rem 0 2rem;
+  margin: 5rem 0 2.5rem;
   position: relative;
 }
 
@@ -124,7 +142,7 @@ img {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: var(--amarillo);
+  background-color: #007BFF; /* azul */
   margin: 1rem auto 0;
   border-radius: 2px;
 }
@@ -133,74 +151,83 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  padding: 0 1.5rem;
+  gap: 2.5rem;
+  padding: 0 2rem 4rem;
 }
 
 .card {
   background-color: var(--gris-claro);
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
+  padding: 2.5rem 1.8rem;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  flex: 1 1 280px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  flex: 1 1 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   color: var(--azul-noche);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .card p {
   color: var(--gris);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* ===============================
    Footer
 ================================= */
 footer {
-  background-color: var(--azul-noche);
-  color: var(--blanco);
-  padding: 3rem 2rem;
-  font-size: 0.9rem;
+  background-color: var(--blanco);
+  color: var(--azul-noche);
+  padding: 4rem 2rem 2rem;
+  font-size: 0.95rem;
 }
 
 .footer-top {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
+  text-align: center;
+  gap: 1rem;
 }
 
 .footer-top h3 {
-  color: var(--amarillo);
-  font-size: 1rem;
+  color: var(--azul-noche);
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
 .iconos-redes {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .iconos-redes img {
-  height: 28px;
+  height: 30px;
   filter: brightness(1.1);
+  transition: transform 0.2s ease;
+}
+
+.iconos-redes img:hover {
+  transform: scale(1.1);
 }
 
 .footer-bottom {
   margin-top: 2rem;
   text-align: center;
-  color: var(--gris-claro);
+  color: var(--azul-noche);
   font-size: 0.85rem;
 }
 
@@ -219,6 +246,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     text-align: left;
+    gap: 2rem;
   }
 
   .texto, .imagen {
@@ -228,5 +256,15 @@ footer {
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-top > div {
+    flex: 1;
+  }
+
+  .iconos-redes {
+    justify-content: center;
   }
 }

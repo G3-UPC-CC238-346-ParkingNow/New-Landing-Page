@@ -3,7 +3,7 @@
 ================================= */
 :root {
   --azul-noche: #2d333f;
-  --amarillo: #fff500;
+  --azul: #007bff;
   --gris: #828282;
   --gris-claro: #f2f2f2;
   --blanco: #ffffff;
@@ -21,6 +21,7 @@ body {
   background-color: var(--blanco);
   color: var(--azul-noche);
   line-height: 1.6;
+  overflow: hidden;
 }
 
 img {
@@ -36,6 +37,12 @@ img {
   background-color: var(--blanco);
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--gris-claro);
+}
+
+
+.logo {
+  max-height: 60px;
+  width: auto;
 }
 
 .header-container {
@@ -60,7 +67,7 @@ img {
 }
 
 .nav a:hover {
-  color: var(--amarillo);
+  color: var(--azul);
 }
 
 /* -------------------------------
@@ -72,8 +79,9 @@ img {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 4rem 2rem;
-  min-height: 70vh;
+  padding: 0.5rem 2rem 0;
+  min-height: 50vh;
+  background-color: var(--gris-claro);
 }
 
 .img-404 {
@@ -84,7 +92,7 @@ img {
 
 h1 {
   font-size: 5rem;
-  color: var(--amarillo);
+  color: var(--azul);
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -103,8 +111,8 @@ p {
 }
 
 .btn-principal {
-  background-color: var(--amarillo);
-  color: #000;
+  background-color: var(--azul);
+  color: #fff;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   border-radius: 6px;
@@ -113,46 +121,54 @@ p {
 }
 
 .btn-principal:hover {
-  background-color: #e6dc00;
+  background-color: #0069d9;
 }
 
-/* -------------------------------
+/* ===============================
    Footer
--------------------------------- */
+================================= */
 footer {
-  background-color: var(--azul-noche);
-  color: var(--blanco);
-  padding: 3rem 2rem;
-  font-size: 0.9rem;
+  background-color: var(--blanco);
+  color: var(--azul-noche);
+  padding: 2rem 2rem 1.5rem;
+  font-size: 0.95rem;
 }
 
 .footer-top {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   align-items: center;
+  text-align: center;
+  gap: 1rem;
 }
 
-footer h3 {
-  color: var(--amarillo);
-  font-size: 1rem;
+.footer-top h3 {
+  color: var(--azul-noche);
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
 .iconos-redes {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .iconos-redes img {
-  height: 28px;
+  height: 30px;
   filter: brightness(1.1);
+  transition: transform 0.2s ease;
+}
+
+.iconos-redes img:hover {
+  transform: scale(1.1);
 }
 
 .footer-bottom {
   margin-top: 2rem;
   text-align: center;
-  color: var(--gris-claro);
+  color: var(--azul-noche);
   font-size: 0.85rem;
 }
 
@@ -168,6 +184,8 @@ footer h3 {
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
   }
 
   .container-404 {
