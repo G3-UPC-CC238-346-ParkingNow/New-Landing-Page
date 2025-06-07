@@ -18,5 +18,5 @@ Puedes abrir el archivo `index.html` en cualquier navegador moderno para ver la 
 
 ## 👨‍💻 Autor
 
-Desarrollado por [Tu Nombre] – Estudiante de Ingeniería de Software  
-[GitHub](https://github.com/tuusuario) · [LinkedIn](https://linkedin.com/in/tuperfil)
+Desarrollado por el grupo 3 CodeMondonguito – Estudiantes de Ingeniería de Software  
+
